@@ -4,14 +4,25 @@
       Vue Basics
     </title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+      .canvas {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        background: #ddd;
+      }
+    </style>
   </head>
 
   <body>
-    Vue Basics
+    <h1>Vue Basics</h1>
+
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <button @click="logEvent">Log Event Info</button>
+      <div class="canvas" @mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
-  <div id="app">
-    <h2>{{ title }}</h2>
-    <p>I earn {{ wage }}</p>
-  </div>
-  <script src="app.js"></script>
 </html>
