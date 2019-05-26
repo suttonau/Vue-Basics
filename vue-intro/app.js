@@ -4,10 +4,12 @@ new Vue({
   el: '#app',
   data: {
     title: 'Vues from the 6',
+    name: 'Marathon Sean',
     coords: {
       x: 0,
       y: 0
-    }
+    },
+    showName: true
   },
   methods: {
     greet() {
@@ -19,6 +21,9 @@ new Vue({
     logCoords(e) {
       this.coords.x = e.offsetX
       this.coords.y = e.offsetY
+    },
+    toggleName() {
+      this.showName = !this.showName
     }
   }
 })
